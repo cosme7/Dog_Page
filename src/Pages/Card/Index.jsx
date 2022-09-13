@@ -10,7 +10,6 @@ export default function Card(){
 
   const getDoggo = () => {
     axios.get('https://dog.ceo/api/breeds/image/random').then( response => {
-      console.log(getDoggo)
       setDoggo(response.data.message)
       setStatus(true)
     });
@@ -22,7 +21,7 @@ export default function Card(){
         <S.Wrapper>
           <h1>If you want to relax, click the button!</h1>
           <Link to='/'>Return to Home</Link>
-          {status  &&  <img src={doggo} alt='doguinho fofo' />}
+          {status  &&  <img src={doggo} alt='D O G G O' />}
           <button onClick={() =>{getDoggo()}}>Click Here!</button>
         </S.Wrapper>
       </S.Container>
